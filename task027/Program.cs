@@ -6,21 +6,21 @@
 Console.Write("Введите число N: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
-int SumNumber(int numberN)
+int SumNum(int numN)
 {
 
-    int count = Convert.ToString(numberN).Length;
+    int count = Convert.ToString(numN).Length;
     int advance = 0;
     int result = 0;
 
     for (int i = 0; i < count; i++)
     {
-        advance = numberN - numberN % 10;
-        result = result + (numberN - advance);
-        numberN = numberN / 10;
+        advance = numN - numN % 10;
+        result = result + (numN - advance);
+        numN = numN / 10;
     }
     return result;
 }
 
-int sumNumber = SumNumber(numberN);
-Console.WriteLine("Сумма цифр в числе: " + sumNumber);
+int sumNum = SumNum(numberN);
+Console.WriteLine("Сумма цифр в числе: " + sumNum);
